@@ -1587,7 +1587,7 @@ MODULE open_file_for_output (THREAD *thread)
     if (exception_raised)
         return;
 
-    open_output_file (FOPEN_WRITE_TEXT);
+    open_output_file (FOPEN_WRITE_BINARY);
     tcb-> gsl-> output_line = 1;
 }
 
@@ -1659,7 +1659,7 @@ MODULE open_file_for_append (THREAD *thread)
         file_close (current);
       }
 
-    open_output_file (FOPEN_APPEND_TEXT);
+    open_output_file (FOPEN_APPEND_BINARY);
 }
 
 
